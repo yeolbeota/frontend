@@ -13,3 +13,16 @@ export function useUserInfo() {
     }
   );
 }
+
+export function useUsersInfo() {
+  return useQuery(
+    "users-info",
+    () =>
+      authInstance()
+        .get("/user")
+        .then((res) => res.data),
+    {
+      retry: false,
+    }
+  );
+}

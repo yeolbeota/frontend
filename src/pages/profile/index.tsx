@@ -25,7 +25,7 @@ export default function Profile() {
                 backgroundColor: "#1A2962",
               }}
             >
-              <ProfileImg alt="프로필 이미지" />
+              <ProfileImg src={userInfo?.profileImage} alt="프로필 이미지" />
             </Box>
             <Box
               style={{
@@ -55,8 +55,6 @@ export default function Profile() {
                 <Column $gap={6}>
                   <SubTitle>총 공부시간</SubTitle>
                   <Title>{msToTime(totalTimer?.totalTime).join(":")}</Title>
-                  <SubTitle>총 공부량</SubTitle>
-                  <Title>00:00:00</Title>
                 </Column>
               </Row>
             </Box>

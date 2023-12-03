@@ -15,7 +15,7 @@ export default function Header() {
     { name: "프로필", href: "/profile" },
   ];
 
-  const pendingMenuList = [{ name: "로그아웃", href: "/login" }];
+  const pendingMenuList = [{ name: "로그아웃", href: "/logout" }];
 
   return (
     <>

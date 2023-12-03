@@ -36,13 +36,13 @@ export function Student(props: StudentProps) {
         return () => clearInterval(interval);
       }
     }
-  }, [timerInfo, userInfo?.isStudy]); // 의존성 배열에 timerInfo 추가
+  }, [timerInfo, userInfo?.isStudy]);
 
   return (
     <>
       <StudentWrapper $isStudy={props.isStudy}>
         <StudentImgWrapper>
-          <StudentImg alt="" />
+          <StudentImg src={props?.student?.profileImage} />
         </StudentImgWrapper>
         <StudentColumn $isStudy={props.isStudy}>
           <h1>{props.student?.username}</h1>
